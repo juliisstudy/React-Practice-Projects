@@ -1,32 +1,37 @@
-import { useState } from "react"
-import data from "./data"
-export default function Accordian(){
+import { useState } from "react";
+import data from "./data";
+import "./style.css";
 
-    const [selected,setSelected] = useState(null);
+export default function Accordian() {
+  //single selection
+  const [selected, setSelected] = useState(null);
 
-    function handleSingleSelection(getCurrentId){
-        setSelected(getCurrentId === selected?null:getCurrentId);
-    }
+  function handleSignleSelection(getCurrentId){
+    console.log(getCurrentId)
+    setSelected(getCurrentId)
+  }
 
-    return (
-        <div>
-            <div className = "accordian">
-                {
-                    data &&  data.length >0?
-                    (data.map(dataItem => 
-                        <div onClick = {()=>handleSingleSelection(dataItem.id)}key = {dataItem.id}>
-                            <h3>{dataItem.question}</h3>
-                            <span>+</span>
-                            {
-                            selected === dataItem.id?
-                            <div>{dataItem.answer}</div>:null
-                            }
-                        </div>
-                       
-                        ))
-                    : <div> No data found!</div>
-                }
+  return (
+    <div className="wrapper">
+      <div className="accordian">
+        {data && data.length > 0 ? (
+          data.map((dataItem) => (
+            <div className="item" key = {dataItem.id}>
+              <div onClick ={()=>handleSignleSelection(dataItem.id)}className="title">
+                <h3>{dataItem.question}</h3>
+                <span>+</span>
+              </div>
+              {
+                selected === dataItem.id ?
+                <div className="content">{dataItem.answer}</div>
+                :null
+              }
             </div>
-        </div>
-    )
+          ))
+        ) : (
+          <div>no data found</div>
+        )}
+      </div>
+    </div>
+  );
 }
