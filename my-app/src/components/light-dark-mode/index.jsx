@@ -1,8 +1,8 @@
-import useLocalStroage from "./useLocalStroage";
-import './theme.css'
+import useLocalStorage from "./useLocalStorage";
+import "./theme.css";
 
 export default function LightDarkMode() {
-  const [theme, setTheme] = useLocalStroage("theme", "dark");
+  const [theme, setTheme] = useLocalStorage("theme", "dark");
 
   function handleToggleTheme() {
     setTheme(theme === "light" ? "dark" : "light");
