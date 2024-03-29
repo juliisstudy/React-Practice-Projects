@@ -16,6 +16,8 @@
   padding: 0;
   border: 1px solid red;
   width: 80%;
+  animation-name: animateModal;
+  animation-duration: 0.5s;
 }
 .close-modal-icon {
   curson: pointer;
@@ -26,4 +28,15 @@
 .header {
   padding: 4px 16px;
   background-color: green;
+}
+
+@keyframes animateModal {
+  from {
+    bottom: -200px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
 }
