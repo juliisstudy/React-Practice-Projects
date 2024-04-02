@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.search-engine {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
