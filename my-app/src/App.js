@@ -23,6 +23,14 @@ import UseWindowResizeTest from "./components/use-window-resize/test";
 import ScrollToTopAndBottom from "./components/scroll-to-top-bottom/index";
 import ScrollToSection from "./components/scroll-to-top-bottom/scroll-to-section";
 
+import { Routes, Route } from "react-router-dom";
+
+//food
+import Navbar from "./components/food/components/navbar";
+import Home from "./components/food/home";
+import Favorites from "./components/food/favorites";
+import Detail from "./components/food/detail";
+
 function App() {
   return (
     <div className="App">
@@ -48,7 +56,16 @@ function App() {
       {/* <UseOnclickOutsideTest /> */}
       {/* <UseWindowResizeTest /> */}
       {/* <ScrollToTopAndBottom /> */}
-      <ScrollToSection />
+      {/* <ScrollToSection /> */}
+
+      <div className="min-h-screen p-6 bg-white text-gray-600 text-lg">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/favorites" element={<Favorites />} />
+          <Route path="/recipe-item/:id" element={<Detail />} />
+        </Routes>
+      </div>
     </div>
   );
 }
