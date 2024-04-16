@@ -1,0 +1,5 @@
+.blogList {
+  display: grid;
+  grid-template-column: repeat(4, 1fr);
+  gap: 20px;
+}
