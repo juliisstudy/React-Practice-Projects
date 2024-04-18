@@ -1,12 +1,18 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const path = require("path");
-const { logger } = require("./middleware/logger");
+const { logger, logEvents } = require("./middleware/logger");
 const errorHandler = require("./middleware/errorHandler");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const corsOptions = require("./config/corsOptions");
+//const connectDB = require("./config/dbConn");
+const mongoose = require("mongoose");
+
 const PORT = process.env.PORT || 3500;
+
+//connectDB();
 
 //middleware
 app.use(logger);
@@ -16,6 +22,7 @@ app.use(cookieParser());
 
 app.use("/", express.static(path.join(__dirname, "public")));
 app.use("/", require("./routes/root"));
+app.use("/users", require("./routes/userRoutes"));
 
 //doesnot match the routs above
 app.all("*", (req, res) => {
@@ -29,4 +36,5 @@ app.all("*", (req, res) => {
   }
 });
 app.use(errorHandler);
-app.listen(PORT, () => console.log(`Server runing on port ${PORT}`));
+
+//mongoose db connection
