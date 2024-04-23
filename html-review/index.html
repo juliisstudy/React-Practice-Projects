@@ -101,8 +101,99 @@
 </section>
 
 <section>
-    
+    <table>
+        <caption>My daily schedule</caption>
+        <thead>
+        <tr>
+            <th>&nbsp;</th>
+            <th scope="col">time</th>
+                        <th scope="col">activity</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">morning</th>
+            <td> <time datetime="08:00">8am</time>-<time datetime="11:00">11am</time></td>
+            <td>write code</td>
+        </tr>
+        <tr>
+            <td rowspan="2">all other times</td>
+            <td>Free time</td>
+        </tr>
+        <tfoot>
+            <tr>
+            <td colspan="2">and that's what i do every day</td>
+        </tr>
+    </tfoot>
+        </tbody>
+    </table>
 </section>
+<article id="contact">
+    <h2>contact</h2>
+    <form action ="https://httpbin.org/get" method="get">
+        <fieldset>
+            <legend>Personal inform</legend>
+        <p>
+        <label for="firstName">First name</label>
+        <input type="text" name="firstName" id="firstName" placeholder="juli" autocomplete="on"
+        required autofocus>
+        </p>
+         <p>
+        <label for="password">password:</label>
+        <input type="password" name="password" id="password" placeholder="" 
+        required >
+        </p>
+        <p>
+        <label for="phone">phone:</label>
+        <input type="tel" name="phone" id="phone" placeholder="" 
+         pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+        </p>
+        <p>
+        <label for="decade">favorite decade:</label>
+        <input type="number" name="decade" id="decade" placeholder="" 
+         id="decade" min="1950" max="2020" step="10"value="1980"required>
+        </p>
+<p>
+        <label for="ciffee">favorite coffee:</label>
+       <select name="coffee" id="coffee" multiple size="5">
+            <optgroup label="coffees">
+             <option value="regular" selected>regular coffee</option>
+             <option value="iced coffee">iced coffee</option>
+            </optgroup>
+<optgroup label="drinks">
+             <option value="tea" selected>tea</option>
+             <option value="juice">iced juice</option>
+            </optgroup>
+
+       </select>
+        </p>
+
+<p>
+        <label for="ciffee">favorite coffee:</label>
+       <datalist name="coffee" id="coffee" multiple size="5">
+            <optgroup label="coffees">
+             <option value="regular" selected>regular coffee</option>
+             <option value="iced coffee">iced coffee</option>
+            </optgroup>
+<optgroup label="drinks">
+             <option value="tea" selected>tea</option>
+             <option value="juice">iced juice</option>
+            </optgroup>
+
+       </datalist>
+        </p>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend> what is your favorite food?</legend>
+            <p><input type="radio" name="food" id="tacos"></p>
+                        <p><input type="radio" name="burger" id="burger"></p>
+
+
+        </fieldset>
+    </form>
+</article>
 </main>
 <footer>
 <p><a href="#">Back to top</a></p>
