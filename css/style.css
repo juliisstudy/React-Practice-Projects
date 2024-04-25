@@ -38,3 +38,33 @@ main {
 p {
   font-size: 1rem;
 }
+
+ol {
+  list-style-type: lower-alpha;
+}
+ul {
+  list-style-type: square;
+  text-align: center;
+  list-style-postiton: inside;
+  color: blue;
+  line-height: 1.6;
+  list-style-image: url("../");
+  list-style: square url("../") inside;
+}
+li {
+  color: red;
+}
+ul li:nth-child(2) {
+  color: red;
+}
+
+ul li:nth-child(odd) {
+  color: red;
+}
+ul li:nth-child(even) {
+  color: red;
+}
+ul li ::marker {
+  color: #000;
+  content: "only $5";
+}
