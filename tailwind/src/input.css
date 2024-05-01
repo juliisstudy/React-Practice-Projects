@@ -5,3 +5,9 @@
 .radial-blue {
   background: blue;
 }
+@layer base {
+  html {
+    //background-color: lime;
+    @apply bg-slate-50;
+  }
+}

@@ -2,7 +2,13 @@
 module.exports = {
   content: ["./build/*.html"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        vuejs: {
+          100: "#49e659",
+        },
+      },
+    },
   },
   plugins: [],
 };
