@@ -1,4 +1,8 @@
 {
-    "editor.fontSize": 9,
-    "markdown.preview.fontSize": 10
+    "editor.fontSize": 8,
+    "markdown.preview.fontSize": 10,
+    "editor.accessibilityPageSize": 8,
+    "editor.minimap.showMarkSectionHeaders": false,
+    "editor.minimap.sectionHeaderFontSize": 8,
+    "screencastMode.fontSize": 20
 }
