@@ -9,7 +9,9 @@ import { addProducts } from "@/app/admin/_actions/products";
 import { useFormStatus } from "react-dom";
 
 export function ProductForm() {
-  const [priceIncents, setPriceInCents] = useState<number>();
+  const [priceIncents, setPriceInCents] = useState<number | undefined>(
+    product?.priceInCents
+  );
   return (
     <form action={action} className="space-y-8">
       <div className="space-y-2">

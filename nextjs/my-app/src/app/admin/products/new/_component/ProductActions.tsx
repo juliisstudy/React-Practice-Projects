@@ -1,3 +1,5 @@
+"use client";
+
 import { toggleProductAvailablity } from "@/app/admin/_actions/products";
 import { DropdownMenu, DropdownMenuItem } from "@radix-ui/react-dropdown-menu";
 import { startTransition, useTransition } from "react";
@@ -15,7 +17,7 @@ export function ActiveToggleDropdownItem({
       disabled={isPending}
       onClick={() => {
         startTransition(async () => {
-          await toggleProductAvailability(id, !isAvailableForPurchase);
+          await toggleProductAvailablity(id, !isAvailableForPurchase);
         });
       }}
     >
@@ -34,10 +36,10 @@ export function DeleteDropdownItem({
   const [isPending, startTransition] = useTransition();
   return (
     <DropdownMenuItem
-      disabled={isPending}
+      disabled={isPending || disabled}
       onClick={() => {
         startTransition(async () => {
-          await toggleProductAvailablity(id, !isAvailableForPurchase);
+          await deleteProduct(id);
         });
       }}
     ></DropdownMenuItem>
