@@ -39,7 +39,7 @@ export function DeleteDropdownItem({
       disabled={isPending || disabled}
       onClick={() => {
         startTransition(async () => {
-          await deleteProduct(id);
+          //   await deleteProduct(id);
         });
       }}
     ></DropdownMenuItem>
