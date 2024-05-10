@@ -1,3 +1,5 @@
+import styles from "./styles.module.css";
+
 export default function Aboutlayout({
   children,
 }: {
@@ -6,7 +8,7 @@ export default function Aboutlayout({
   return (
     <>
       <nav>about navbar</nav>
-      <main>{children}</main>
+      <main className={styles.main}>{children}</main>
     </>
   );
 }

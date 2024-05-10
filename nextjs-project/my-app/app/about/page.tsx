@@ -1,5 +1,11 @@
 import Link from "next/link";
 
 export default function About() {
-  return <div>page</div>;
+  //throw new Error("not today");
+  return (
+    <>
+      <div>page</div>
+      <Link href="/">Link to home page</Link>
+    </>
+  );
 }
