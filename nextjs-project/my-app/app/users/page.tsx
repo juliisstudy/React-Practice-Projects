@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 };
 
 export default async function UsersPage() {
-  const usersData: Promise<[]> = getAllUsers();
+  const usersData: Promise<User[]> = getAllUsers();
   const users = await usersData;
 
   const content = (
@@ -19,14 +19,14 @@ export default async function UsersPage() {
       {users.map((user) => {
         return (
           <>
-            {/* <p key={user.id}>
+            <p key={user.id}>
               <Link href={`/users/${user.id}`}>{user.name}</Link>
-            </p> */}
+            </p>
             <br />
           </>
         );
       })}
     </section>
   );
-  return <div>Page</div>;
+  return content;
 }
