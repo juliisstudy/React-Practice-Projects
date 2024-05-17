@@ -15,3 +15,5 @@ export default async function UserPosts({ promise }: Props) {
   });
   return content;
 }
+
+export async function generateStaticParams() {}
