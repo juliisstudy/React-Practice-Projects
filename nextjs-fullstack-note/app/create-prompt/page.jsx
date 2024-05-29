@@ -10,6 +10,7 @@ export default function CreatPrompt() {
   const { data: session } = useSession();
 
   const [submitting, setSubmitting] = useState(false);
+  
   const [post, setPost] = useState({
     prompt: "",
     tag: "",
