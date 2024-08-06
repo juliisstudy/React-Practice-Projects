@@ -34,11 +34,15 @@ export default function CartSidebar() {
                 value={item.qty}
                 onChange={(e) => addToCartHandler(item, Number(e.target.value))}
               >
-                {/* {[...Array(item.countInStock).keys()].map((x) => {
-                  <option key={x + 1} value={x + 1}>
+                {[...Array(item.countInStock).keys()].map((x) => (
+                  <option
+                    key={x + 1}
+                    value={x + 1}
+                    className="border border-black"
+                  >
                     {x + 1}
-                  </option>;
-                })} */}
+                  </option>
+                ))}
               </select>
               <button onClick={() => removeFromCartHandler(item.id)}>
                 Delete
