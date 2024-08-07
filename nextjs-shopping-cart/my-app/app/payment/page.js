@@ -23,6 +23,7 @@ export default function PaymentPage() {
     }
     setValue("paymentMethod", paymentMethod);
   }, [paymentMethod, shippingAddress, router, setValue]);
+
   const submitHandler = ({ paymentMethod }) => {
     dispatch(savePaymentMethod(paymentMethod));
     router.push("/placeorder");

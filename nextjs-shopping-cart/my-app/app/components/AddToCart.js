@@ -7,7 +7,7 @@ export default function AddToCart({
   product,
   showQty = true,
   redirect = false,
-  increasePerClick = false,
+  increasePerClick = true,
 }) {
   const dispatch = useDispatch();
   const { cartItems } = useSelector((state) => state.cart);

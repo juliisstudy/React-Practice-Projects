@@ -12,7 +12,7 @@ export default function ProductItem({ product }) {
         <p>{product.brand}</p>
         <p>${product.price}</p>
         <AddToCart
-          showQty={false}
+          showQty={true}
           product={product}
           increatePerClick={true}
           redirect={false}
