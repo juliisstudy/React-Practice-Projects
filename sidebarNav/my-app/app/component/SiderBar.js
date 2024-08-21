@@ -3,6 +3,7 @@ import React, { createContext, useContext, useState } from "react";
 import { ChevronFirst, ChevronLast } from "lucide-react";
 
 const SideBarContext = createContext();
+
 export default function SiderBar({ children }) {
   const [expanded, setExpanded] = useState(true);
   return (

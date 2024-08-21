@@ -24,6 +24,7 @@ export default function ShippingAddressPage() {
     setValue("postalCode", shippingAddress.postalCode);
     setValue("country", shippingAddress.country);
   }, [setValue, shippingAddress]);
+  
   const submitHandler = ({ fullName, address, city, postalCode, country }) => {
     dispatch(
       saveShippingAddress({ fullName, address, city, postalCode, country })
