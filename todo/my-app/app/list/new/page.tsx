@@ -30,6 +30,7 @@ export default function NewTodo() {
   });
   const [error, setError] = useState("");
   const [isSubmitting, setSubmitting] = useState(false);
+
   const onSubmit = handleSubmit(async (data) => {
     try {
       setSubmitting(true);
@@ -40,6 +41,7 @@ export default function NewTodo() {
       setError("error occured");
     }
   });
+
   return (
     <div>
       {error && (
