@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Square from "./Square";
 
 type Params = {
@@ -13,17 +13,13 @@ export default function Board({ xIsNext, sqaures, onPlay }: Params) {
       //if square already has value return or win
       return;
     }
-
     const nextSquares = sqaures.slice(); //make a copy of squares
     if (xIsNext) {
       nextSquares[i] = "X";
     } else {
       nextSquares[i] = "O";
     }
-    nextSquares[i] = "X";
     onPlay(nextSquares);
-    // setSquares(nextSquares);
-    // setXIsNext(!xIsNext); //take turn
   }
 
   function calculateWinner(sqaures: string[]) {
@@ -54,25 +50,26 @@ export default function Board({ xIsNext, sqaures, onPlay }: Params) {
   const winner = calculateWinner(sqaures);
   let status;
   if (winner) {
-    status = "Winder is " + winner;
+    status = "Winner is : " + winner;
   } else {
-    status = "next player" + (xIsNext ? "X" : "O");
+    status = "Next Player :  " + (xIsNext ? "X" : "O");
   }
 
   return (
     <>
-      <div>{status}</div>
-      <div className="board-row">
+      <h4 className="font-bold text-3xl text-center mb-4">Tic-Tac-Toe</h4>
+      <div className="font-bold text-lg text-center mb-4">{status}</div>
+      <div className="flex flex-row mt-4">
         <Square value={sqaures[0]} onSqureClick={() => handleClick(0)} />
         <Square value={sqaures[1]} onSqureClick={() => handleClick(1)} />
         <Square value={sqaures[2]} onSqureClick={() => handleClick(2)} />
       </div>
-      <div className="board-row">
+      <div className="flex flex-row">
         <Square value={sqaures[3]} onSqureClick={() => handleClick(3)} />
         <Square value={sqaures[4]} onSqureClick={() => handleClick(4)} />
         <Square value={sqaures[5]} onSqureClick={() => handleClick(5)} />
       </div>
-      <div className="board-row">
+      <div className="flex flex-row">
         <Square value={sqaures[6]} onSqureClick={() => handleClick(6)} />
         <Square value={sqaures[7]} onSqureClick={() => handleClick(7)} />
         <Square value={sqaures[8]} onSqureClick={() => handleClick(8)} />

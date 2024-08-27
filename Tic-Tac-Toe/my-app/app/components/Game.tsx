@@ -21,23 +21,31 @@ export default function Game() {
   const moves = history.map((squares: number[], move: number) => {
     let description;
     if (move > 0) {
-      description = "Go to move" + move;
+      description = "Go to move " + move;
     } else {
       description = "Go to game start";
     }
     return (
-      <li key={move}>
+      <li key={move} className="mt-4 hover:text-slate-500">
         <button onClick={() => jumpTo(move)}>{description}</button>
       </li>
     );
   });
 
   return (
-    <div>
-      <Board xIsNext={xIsNext} sqaures={currentSquares} onPlay={handlePlay} />
-      <div>
-        <ol>{moves}</ol>
+    <>
+      <div className="flex flex-row gap-10">
+        <div>
+          <Board
+            xIsNext={xIsNext}
+            sqaures={currentSquares}
+            onPlay={handlePlay}
+          />
+        </div>
+        <div className="mt-20 font-normal  ">
+          <ol>{moves}</ol>
+        </div>
       </div>
-    </div>
+    </>
   );
 }

@@ -7,7 +7,10 @@ type Params = {
 
 export default function Square({ value, onSqureClick }: Params) {
   return (
-    <button className="border border-red-200 w-10 h-10" onClick={onSqureClick}>
+    <button
+      className="border border-slate-400 w-32 h-32 font-bold text-3xl"
+      onClick={onSqureClick}
+    >
       {value}
     </button>
   );
