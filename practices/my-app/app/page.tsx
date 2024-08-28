@@ -4,6 +4,13 @@ import Form from "./components/Form";
 import CheckList from "./components/CheckList";
 import RemoveFromList from "./components/RemoveFromList";
 import Counter from "./components/Counter";
+import Accordion from "./components/Accordion";
+import AccordionII from "./components/AccordionII";
+
+import CountersAndState from "./components/CountersAndState";
+import CounterDestroysState from "./components/CounterDestroysState";
+import CounterFancy from "./components/CounterFancy";
+import PlayerCounter from "./components/PlayerCounter";
 
 export default function Home() {
   return (
@@ -13,6 +20,12 @@ export default function Home() {
       <CheckList />
       <RemoveFromList />
       <Counter />
+      <Accordion />
+      <AccordionII />
+      <CountersAndState />
+      <CounterDestroysState />
+      <CounterFancy />
+      <PlayerCounter />
     </main>
   );
 }
