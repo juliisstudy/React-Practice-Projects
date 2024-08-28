@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import classnames from "classnames";
 
 export default function Navbar() {
+    
   const currentPath = usePathname();
 
   const links = [

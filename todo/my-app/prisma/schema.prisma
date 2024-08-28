@@ -23,7 +23,7 @@ model list {
 }
 
 enum Status {
-  OPEN
+  START
   IN_PROGRESS
-  CLOSED
+  FINISHED
 }

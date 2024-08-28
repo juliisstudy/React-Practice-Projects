@@ -20,10 +20,13 @@ main()
 export async function POST(request:NextRequest){
     const body = await request.json()
     const validation = createTodoSchema.safeParse(body)
+
     if(!validation.success)
         return NextResponse.json(validation.error.format(),{status:400})
+
     const newList = await prisma.list.create({
         data:{title:body.title,detail:body.detail}
     })
+    
     return NextResponse.json(newList,{status:201})
 }

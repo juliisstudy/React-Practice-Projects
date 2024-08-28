@@ -8,6 +8,7 @@ type Params = {
 };
 
 export default function Board({ xIsNext, sqaures, onPlay }: Params) {
+    
   function handleClick(i: number) {
     if (sqaures[i] || calculateWinner(sqaures)) {
       //if square already has value return or win
