@@ -3,6 +3,11 @@ import React, { useState } from "react";
 import AddTask from "./AddTask";
 import TaskList from "./TaskList";
 
+export type Task = {
+  id: number;
+  text: string;
+  done: boolean;
+};
 let nextId = 3;
 const initialTasks = [
   { id: 0, text: "Visit Kafka Museum", done: true },

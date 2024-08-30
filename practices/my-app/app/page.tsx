@@ -13,7 +13,8 @@ import CounterFancy from "./components/CounterFancy";
 import PlayerCounter from "./components/PlayerCounter";
 import App from "@/app/components/chat/App";
 import Todo from "@/app/components/todoList/App";
-import TaskApp from "@/app/components/todoReducer/TaskApp";
+import TodoReduceAPP from "@/app/components/todoReducer/TodoReduceAPP";
+import SectionApp from "@/app/components/context/SectionApp";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -30,7 +31,8 @@ export default function Home() {
       <PlayerCounter />
       <App />
       <Todo />
-      <TaskApp />
+      <TodoReduceAPP />
+      <SectionApp />
     </main>
   );
 }
