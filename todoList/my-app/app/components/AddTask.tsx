@@ -10,6 +10,7 @@ export default function AddTask({
     <div>
       <input
         placeholder="add task"
+        className=""
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
