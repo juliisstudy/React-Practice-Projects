@@ -1,0 +1,22 @@
+.wrapper {
+  padding: 8px;
+}
+.tab-item {
+  display: inline-flex;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 15px;
+  cursor: pointer;
+  border: none;
+}
+.tab-item.active {
+  border-color: black;
+  background: yellow;
+}
+.content {
+  padding: 20px 10px;
+  height: 300px;
+  overflow: auto;
+  background-color: white;
+}
