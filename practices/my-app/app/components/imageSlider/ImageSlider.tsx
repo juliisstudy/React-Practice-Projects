@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
 import Image from "next/image";
 import "./style.css";
+
 type Image = {
   id: number;
   download_url: string;

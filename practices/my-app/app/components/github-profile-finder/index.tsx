@@ -1,10 +1,12 @@
 "use client";
 import { useState, useEffect } from "react";
 import User from "./user";
+
 export default function GithubProfileFinder() {
   const [userName, setUserName] = useState("juli");
   const [userData, setUserData] = useState(null);
   const [loading, setLoading] = useState(false);
+  
   function handleSubmit() {
     fetchGithubUserData();
   }
